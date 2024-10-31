@@ -20,7 +20,7 @@
     "noUncheckedSideEffectImports": true,
 
     /* Добавление алиасов */
-    "baseUrl": "/REACT-TEST/",
+    "baseUrl": "./",
     "paths": {
       "@customTypes/*": ["src/customTypes/*"],
       "@src/*": ["./src/*"]

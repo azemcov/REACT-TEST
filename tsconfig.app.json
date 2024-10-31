@@ -22,7 +22,7 @@
     "noUncheckedSideEffectImports": true,
 
     /* Добавление алиасов */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@customTypes/*": ["src/customTypes/*"],
       "@components/*": ["./src/components/*"],

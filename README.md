@@ -1,10 +1,10 @@
 <h1 align="center">Информационная система для проверки знаний учащихся школы</h1>
 <div align="center">
-<a href='https://azemcov.github.io/REACT-TEST/'><img src="./public/pic.png" alt="Превью" width="70%"></a>
+<a href='https://azemcov.github.io/REACT-TEST/><img src="./public/pic.png" alt="Превью" width="70%"></a>
 </div>
 
 <div align="center">
-<a href='https://github.com/azemcov/REACT-TEST/'>👉 ОТКРЫТЬ 👈</a>
+<a href='https://azemcov.github.io/REACT-TEST/'>👉 ОТКРЫТЬ 👈</a>
 </div>
 
 ## 📖 Описание

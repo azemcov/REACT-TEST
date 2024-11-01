@@ -1,4 +1,7 @@
 <h1 align="center">Информационная система для проверки знаний учащихся школы</h1>
+<div align="center">
+<a href='https://azemcov.github.io/REACT-TEST'><img src="./public/pic.png" alt="Превью" width="30%"></a>
+</div>
 
 <div align="center">
 <a href='https://github.com/azemcov/REACT-TEST'>👉 ОТКРЫТЬ 👈</a>
@@ -29,4 +32,5 @@
 <a href="https://react.dev/"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="50px"></img></a>
 <a href="https://html.spec.whatwg.org/multipage/"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" height="50px"></img></a>
 <a href="https://www.w3.org/Style/CSS/Overview.en.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" height="50px"></img></a>
+<a href="https://getbootstrap.com/"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" height="50px"></img></a>
 <a href="https://v2.vitejs.dev/"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" height="50px"></img></a>

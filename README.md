@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+<h1 align="center">Информационная система для проверки знаний учащихся школы</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+<a href='https://github.com/azemcov/REACT-TEST'>👉 ОТКРЫТЬ 👈</a>
+</div>
 
-Currently, two official plugins are available:
+## 📖 Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Информационная система для проверки знаний учащихся школы.
 
-## Expanding the ESLint configuration
+Включает виды тестов:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- выбор одного варианта
+- выбор нескольких вариантов
+- короткий ответ
+- развернутый ответ
 
-- Configure the top-level `parserOptions` property like this:
+Тест имеет ограничение по времени выполнения.
+При перезагрузке страницы сохраняутся прогресс выполнения.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🔥 Обновления
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **`ноябрь 1, 2024`**: Версия 1.0
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ⚙️ Использованные технологии
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="50px"></img> </a>
+<a href="https://www.typescriptlang.org/"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" height="50px"></img></a>
+<a href="https://react.dev/"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="50px"></img></a>
+<a href="https://html.spec.whatwg.org/multipage/"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" height="50px"></img></a>
+<a href="https://www.w3.org/Style/CSS/Overview.en.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" height="50px"></img></a>
+<a href="https://v2.vitejs.dev/"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" height="50px"></img></a>

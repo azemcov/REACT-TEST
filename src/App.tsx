@@ -123,6 +123,12 @@ function App() {
     );
   }
 
+  function restart() {
+    localStorage.clear();
+    window.location.reload();
+    // location.reload()
+  }
+
   return (
     <>
       {!testIsStarted && !timeIsOver && (
@@ -273,7 +279,7 @@ function App() {
           type='button'
           className='btn btn-danger d-flex justify-content-start'
           disabled={false}
-          onClick={() => (setTimeIsOver(true), localStorage.clear())}
+          onClick={() => setTimeIsOver(true)}
         >
           Закончить тестирование
         </button>
@@ -284,6 +290,7 @@ function App() {
           <TestWindow
             loadedQuestionsData={loadedQuestionsData}
             memory={memory}
+            action={() => restart()}
           ></TestWindow>
         </>
       )}

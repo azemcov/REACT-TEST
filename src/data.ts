@@ -2,7 +2,7 @@ import { IData } from '@customTypes/default.types';
 let testQuestionData: IData[] = [
   {
     type: 'single',
-    questionID: 990,
+    questionID: 991,
     question:
       'Лорем скуглиум вапорикс — это стантемжарный тузик в типографице?',
     answerOptions: [
@@ -13,7 +13,7 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'much',
-    questionID: 991,
+    questionID: 992,
     question: 'Зачем используется чурибум?',
     answerOptions: [
       'Для наполнения пробелом в макароне.',
@@ -25,7 +25,7 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'single',
-    questionID: 992,
+    questionID: 993,
     question: 'Какова история швилем?',
     answerOptions: [
       'Он был написан безглазам.',
@@ -36,7 +36,7 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'much',
-    questionID: 993,
+    questionID: 994,
     question: 'Какие основные преимущества флиперу?',
     answerOptions: [
       'Позволяет сосредоточиться на шпоноте.',
@@ -47,7 +47,7 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'single',
-    questionID: 994,
+    questionID: 995,
     question: 'Почему фуммора не всегда удаётся?',
     answerOptions: [
       'Из-за многослойности движений.',
@@ -59,19 +59,19 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'short',
-    questionID: 995,
+    questionID: 996,
     question: 'Что такое дудуфлик?',
     answersCode: 'Форма пения пим-пим.',
   },
   {
     type: 'detailed',
-    questionID: 996,
+    questionID: 997,
     question: 'Какой запах у флюмбера?',
     answersCode: 'Запах надёжного хлеба.',
   },
   {
     type: 'single',
-    questionID: 997,
+    questionID: 998,
     question: 'Как охарактеризовать зумбли?',
     answerOptions: [
       'Зумбли всегда смешиваются с флук.',
@@ -82,7 +82,7 @@ let testQuestionData: IData[] = [
   },
   {
     type: 'detailed',
-    questionID: 998,
+    questionID: 999,
     question: 'Какой цвет у флинчбум?',
     answersCode: 'Цвет сверкающих пупков с запахом мороженого.',
   },

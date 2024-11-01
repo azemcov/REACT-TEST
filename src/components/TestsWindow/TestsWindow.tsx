@@ -3,22 +3,38 @@ import { TMemory, IData } from '@customTypes/default.types';
 export default function TestWindow({
   loadedQuestionsData,
   memory,
+  action,
 }: {
   loadedQuestionsData: IData[] | null;
   memory: TMemory[];
+  action: Function;
 }) {
+  function spanner(strings: TemplateStringsArray, ...keys: string[]) {
+    let finalString = ``;
+    keys.forEach((value: any, i: number) => {
+      if (i === 0) {
+        finalString += `<strong>${strings[i]}${value}</strong>`;
+      } else {
+        finalString += `<strong>${strings[i]}</strong>${value}`;
+      }
+    });
+    finalString += strings[strings.length - 1];
+    return `${finalString}`;
+  }
+
   function compareSingle(mdata: IData, indx: number): string {
     let userAnswer: string = mdata.answerOptions
       ? mdata.answerOptions[
           typeof memory[indx] === 'number' ? memory[indx] - 1 : 0
         ]
       : '';
+    userAnswer = typeof userAnswer === 'string' ? userAnswer : '';
     let correctAnswer: string = mdata.answerOptions
       ? mdata.answerOptions[
           typeof mdata.answersCode === 'number' ? mdata.answersCode : 0
         ]
       : '';
-    return `Вопрос № ${indx + 1}
+    return spanner`Вопрос № ${(indx + 1).toString()}
     ${mdata.question}
     Ваш ответ:
     ${userAnswer}
@@ -37,6 +53,7 @@ export default function TestWindow({
             .join('; ')
         : ''
       : '';
+    userAnswer = typeof userAnswer === 'string' ? userAnswer : '';
     let correctAnswer: string =
       mdata.answerOptions && Array.isArray(mdata.answersCode)
         ? mdata.answersCode
@@ -47,7 +64,7 @@ export default function TestWindow({
             .join('; ')
         : '';
 
-    return `Вопрос № ${indx + 1}
+    return spanner`Вопрос № ${(indx + 1).toString()}
     ${mdata.question}
     Ваши ответы:
     ${userAnswer}
@@ -57,9 +74,10 @@ export default function TestWindow({
   }
   function compareShort(mdata: IData, indx: number): string {
     let userAnswer = typeof memory[indx] === 'string' ? memory[indx] : '';
+    userAnswer = typeof userAnswer === 'string' ? userAnswer : '';
     let correctAnswer: string =
       typeof mdata.answersCode === 'string' ? mdata.answersCode : '';
-    return `Вопрос № ${indx + 1}
+    return spanner`Вопрос № ${(indx + 1).toString()}
     ${mdata.question}
     Ваш ответ:
     ${userAnswer}
@@ -69,9 +87,10 @@ export default function TestWindow({
   }
   function compareDetailed(mdata: IData, indx: number): string {
     let userAnswer = typeof memory[indx] === 'string' ? memory[indx] : '';
+    userAnswer = typeof userAnswer === 'string' ? userAnswer : '';
     let correctAnswer: string =
       typeof mdata.answersCode === 'string' ? mdata.answersCode : '';
-    return `Вопрос № ${indx + 1}
+    return spanner`Вопрос № ${(indx + 1).toString()}
     ${mdata.question}
     Ваш ответ:
     ${userAnswer}
@@ -95,18 +114,32 @@ export default function TestWindow({
 
   return (
     <>
-      {typeof loadedQuestionsData !== null && (
-        <div className='py-5 vh-100 overflow-scroll'>
-          {Array.isArray(loadedQuestionsData)
-            ? loadedQuestionsData.map((m, i) => (
-                <div key={`test_window-key-${i}`}>
-                  {test(m, i)}
-                  <br />
-                </div>
-              ))
-            : 'Ошибка данных!'}
+      <p className='h2'>Тестирование завершено</p>
+      {loadedQuestionsData !== null && (
+        <div className='pb-5 d-flex ' style={{ height: '80vh' }}>
+          <div className='overflow-scroll text-start'>
+            {Array.isArray(loadedQuestionsData)
+              ? loadedQuestionsData.map((m, i) => (
+                  <div>
+                    <div
+                      key={`test_window-key-${i}`}
+                      dangerouslySetInnerHTML={{ __html: test(m, i) }}
+                    />
+                    <br />
+                  </div>
+                ))
+              : 'Ошибка данных!'}
+          </div>
         </div>
       )}
+      <button
+        type='button'
+        className='btn btn-danger d-flex flex-row justify-content-start'
+        disabled={false}
+        onClick={() => action()}
+      >
+        Пройти заново
+      </button>
     </>
   );
 }
